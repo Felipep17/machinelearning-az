@@ -1,15 +1,18 @@
 # Plantilla de Pre Procesado
-
 # Cómo importar las librerías
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
 # Importar el data set
-dataset = pd.read_csv('Data.csv')
+dataset = pd.read_csv('Data.csv') #Empieza en 0
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 3].values
-
+# Tratamiento de los NA
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(missing_values = np.nan, strategy = "mean")
+imputer = imputer.fit(X[:, 1:3])
+X[:, 1:3] = imputer.transform(X[:, 1:3])
 
 # Dividir el data set en conjunto de entrenamiento y conjunto de testing
 from sklearn.model_selection import train_test_split

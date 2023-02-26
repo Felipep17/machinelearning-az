@@ -2,7 +2,8 @@
 # Importar el dataset
 dataset = read.csv('Data.csv')
 #dataset = dataset[, 2:3]
-
+dataset$Age= ifelse(is.na(dataset$Age),median(dataset$Age,na.rm=T),dataset$Age)
+dataset$Salary= ifelse(is.na(dataset$Salary),median(dataset$Salary,na.rm=T),dataset$Salary)
 # Dividir los datos en conjunto de entrenamiento y conjunto de test
 # install.packages("caTools")
 library(caTools)
