@@ -17,7 +17,7 @@ testing_set = subset(dataset, split == FALSE)
 # testing_set[,2:3] = scale(testing_set[,2:3])
 
 # Ajustar el modelo de regresión lineal simple con el conjunto de entrenamiento
-regressor = lm(formula = Salary ~ YearsExperience,
+regressor = lm(Salary ~ YearsExperience,
                data = training_set)
 
 # Predecir resultados con el conjunto de test
@@ -46,5 +46,6 @@ ggplot() +
   ggtitle("Sueldo vs Años de Experiencia (Conjunto de Testing)") +
   xlab("Años de Experiencia") +
   ylab("Sueldo (en $)")
-
-
+summary(regressor)
+library(ggfortify)
+autoplot(regressor)
