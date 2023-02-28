@@ -61,3 +61,4 @@ library(MASS)
 plot(fitted.values(regressor),studres(regressor),pch=19,xlab='Valores Ajustados',ylab=' Residuos Estudentizados')
 lines(lowess(studres(regressor)~fitted.values(regressor)),lwd=2,col='red1')
 abline(h=0,lwd=2,lty=2)
+

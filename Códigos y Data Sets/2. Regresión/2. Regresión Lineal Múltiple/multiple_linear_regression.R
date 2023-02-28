@@ -1,5 +1,5 @@
 # Regresión Lineal Múltiple
-
+library(ElemStatLearn)
 # Importar el dataset
 dataset = read.csv('50_Startups.csv')
 #dataset = dataset[, 2:3]
@@ -29,7 +29,10 @@ regression = lm(formula = Profit ~ .,
 
 # Predecir los resultados con el conjunto de testing
 y_pred = predict(regression, newdata = testing_set)
-
+summary(regression)
+training_set
+library(car)
+vif(regression)
 # Construir un modelo óptimo con la Eliminación hacia atrás
 SL = 0.05
 regression = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State,
