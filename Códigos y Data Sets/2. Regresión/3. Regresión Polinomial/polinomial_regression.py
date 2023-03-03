@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Mar  5 12:45:44 2019
-
-@author: juangabriel
-"""
-
 # Regresión polinómica
 
 # Cómo importar las librerías
@@ -65,6 +57,7 @@ plt.show()
 # Se ha añadido la sintaxis de doble corchete necesaria para hacer la predicción en las últimas versiones de Python (3.7+)
 lin_reg.predict([[6.5]])
 lin_reg_2.predict(poly_reg.fit_transform([[6.5]]))
+
 
 
 

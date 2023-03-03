@@ -27,7 +27,7 @@ dataset$Level3 = dataset$Level^3
 dataset$Level4 = dataset$Level^4
 poly_reg = lm(formula = Salary ~ .,
               data = dataset)
-
+summary(poly_reg)
 # Visualización del modelo lineal
 # install.packages("ggplot2")
 library(ggplot2)
