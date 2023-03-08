@@ -58,7 +58,10 @@ ggplot() +
 
 # Predicción de nuevos resultados con Regresión Lineal
 y_pred = predict(lin_reg, newdata = data.frame(Level = 6.5))
-
+model<- lm(Salary~Level+I(Level^2)+I(Level^3)+I(Level^4),data=dataset )
+summary(poly_reg)
+summary(model)
+predict(model,newdata=data.frame(Level=6.5))
 # Predicción de nuevos resultados con Regresión Polinómica
 y_pred_poly = predict(poly_reg, newdata = data.frame(Level = 6.5,
                                                 Level2 = 6.5^2,
