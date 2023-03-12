@@ -1,13 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 11 18:38:15 2019
-
-@author: juangabriel
-"""
-
-# SVR
-
 # Cómo importar las librerías
 import numpy as np
 import matplotlib.pyplot as plt
@@ -38,7 +28,7 @@ regression = SVR(kernel = "rbf")
 regression.fit(X, y)
 
 # Predicción de nuestros modelos con SVR
-y_pred = sc_y.inverse_transform(regression.predict(sc_X.transform(np.array([[6.5]]))))
+y_pred = sc_y.inverse_transform(regression.predict(sc_X.transform(np.array([[6.5]]))).reshape(-1, 1))
 
 # Visualización de los resultados del SVR
 X_grid = np.arange(min(X), max(X), 0.1)

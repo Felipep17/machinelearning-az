@@ -43,3 +43,4 @@ ggplot() +
   ggtitle("Predicción con Árbol de Decisión (Modelo de Regresión)") +
   xlab("Nivel del empleado") +
   ylab("Sueldo (en $)")
+

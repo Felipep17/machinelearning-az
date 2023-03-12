@@ -1,6 +1,7 @@
 # Plantilla para el Pre Procesado de Datos
 # Importar el dataset
 dataset = read.csv('Data.csv')
+View(dataset)
 #dataset = dataset[, 2:3]
 dataset$Age= ifelse(is.na(dataset$Age),median(dataset$Age,na.rm=T),dataset$Age)
 dataset$Salary= ifelse(is.na(dataset$Salary),median(dataset$Salary,na.rm=T),dataset$Salary)

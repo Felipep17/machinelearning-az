@@ -24,7 +24,7 @@ regression = svm(formula = Salary ~ .,
                  data = dataset, 
                  type = "eps-regression", 
                  kernel = "radial")
-  
+summary(regression)
 # Predicción de nuevos resultados con SVR 
 y_pred = predict(regression, newdata = data.frame(Level = 6.5))
 
