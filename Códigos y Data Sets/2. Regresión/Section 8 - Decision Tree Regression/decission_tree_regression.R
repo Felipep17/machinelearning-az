@@ -33,7 +33,7 @@ y_pred = predict(regression, newdata = data.frame(Level = 6.5))
 # Visualización del modelo de árbol de regresión
 # install.packages("ggplot2")
 library(ggplot2)
-x_grid = seq(min(dataset$Level), max(dataset$Level), 0.1)
+x_grid = seq(min(dataset$Level), max(dataset$Level), 1)
 ggplot() +
   geom_point(aes(x = dataset$Level , y = dataset$Salary),
              color = "red") +
@@ -43,4 +43,4 @@ ggplot() +
   ggtitle("Predicción con Árbol de Decisión (Modelo de Regresión)") +
   xlab("Nivel del empleado") +
   ylab("Sueldo (en $)")
-
+summary(regression)

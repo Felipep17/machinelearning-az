@@ -32,7 +32,7 @@ y_pred = predict(regression, newdata = data.frame(Level = 6.5))
 # Visualización del modelo de Random Forest
 # install.packages("ggplot2")
 library(ggplot2)
-x_grid = seq(min(dataset$Level), max(dataset$Level), 0.01)
+x_grid = seq(min(dataset$Level), max(dataset$Level), 1)
 ggplot() +
   geom_point(aes(x = dataset$Level , y = dataset$Salary),
              color = "red") +
