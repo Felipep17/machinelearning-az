@@ -23,7 +23,7 @@ library(randomForest)
 set.seed(1234)
 regression = randomForest(x = dataset[1],
                           y = dataset$Salary,
-                          ntree = 500)
+                          ntree = 5000)
 
 # Predicción de nuevos resultados con Regresión 
 y_pred = predict(regression, newdata = data.frame(Level = 6.5))
@@ -42,3 +42,4 @@ ggplot() +
   ggtitle("Predicción (Random Forest)") +
   xlab("Nivel del empleado") +
   ylab("Sueldo (en $)")
+y_pred
